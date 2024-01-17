@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar js</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+    <div id="e"></div>
+    <div id="f"></div>
+    <div id="g"></div>
+    <div id="h"></div>
+    <div id="i"></div>
+    <script>
+        //getElementById       = digunakan untuk memilih id
+        //innerHTML            = Menulis konten HTML
+        document.getElementById('a').innerHTML = 'sekolah koding';
+        
+        
+        //------------------ Variabel
+        //deklarasi variabel
+        var a   = 1723645;
+        var b   = 178763424;
+        var c   = 'halo';   // tipe data str
+        var d   = 12;       // tipe data int
+        var e   = 1.2234567;       // tipe data desimal
+        var f   = a + e; //aritmatika penjumplahan
+        var g, h, i, j, k, l, m;
+
+        document.getElementById('b').innerHTML = a;
+        document.getElementById('c').innerHTML = b;
+        
+        // Aturan deklarasi variabel
+        //============================================================================
+        // * harus diawali dgn huruf, $. atau _
+        // * hanya boleh mengunakan huruf, angka, _ dan $
+        // * variabel Censitive
+        // * ada ==reserved words== tidak boleh dipalai
+        
+        
+        document.getElementById('d').innerHTML = f;
+
+        // Aritmatika
+        //=============================================================================
+        // #  +     == unutk penjumplahan
+        // #  -     == unutk pengurangan
+        // #  *     == unutk perkalian
+        // #  /     == unutk pembagian
+        // #  %     == unutk modulus
+        
+        a++ //disebut ingkremen atau akan menjumplahkan +1 dari var itu
+        a-- // mengurangi variabel
+
+        // Method angka
+        //==============================================================================
+        // * toFixed(2) => artinya mengambil 2 angka koma dari var yang semulanya banyak
+            f = e.toFixed(2);
+
+        // * random()   => hanya mengembalikan angka 0 sampai 1
+            g = Math.random();
+
+        // * min()          => mengetahui angka terkecil
+            h = Math.min(a, b, d, e);
+            document.getElementById('e').innerHTML = h;
+
+        // * max()          => mengetahui angka terbesar
+            h = Math.max(a, b, d, e);
+            document.getElementById('f').innerHTML = h;
+
+        // round()          => membulatkan angak sesuai angka yg paling dekat
+            i = Math.round(1.5);
+
+        // floor()          => membulatkan angka kebawah
+            // tips supaya random lebih dari 1
+            j = 100 //menentukan range random
+            k = Math.floor(Math.random() * j) + 1 ; // 1 menjadi batas minimal
+        
+        document.getElementById('g').innerHTML = f;
+        document.getElementById('h').innerHTML = g.toFixed(2);
+        document.getElementById('i').innerHTML = i;
+        document.getElementById('j').innerHTML = k;
+
+
+        //=============================================================================
+        // * length     => mencari jumplah huruf
+        // * indexOf()  => mengembalikan jarak yang dicari
+        // * lastIndexOf() => kebalika indexOf()
+        // * search()   => mencari teks
+        // * --------------------------------------------------------------------------
+        // * toUpperCase()
+        // * toLowerCase()
+        // * replace(yg mau diubah, diubah)  => mereplace kata yang ada dengan kata baru
+        // * substring(0, 5)=> mengambil kata sesuai var yang mau ditampilkan
+        // * substr()
+        // * parsetint() => mengubah str menjadi angka / int
+        // * parsfloat()
+
+
+        //=============================================================================
+        // function pada js
+        function printText(id = 'a', hasil = 0) {
+            document.getElementById(id).innerHTML = hasil;
+        }
+        l = 'k'
+        m = 100
+        printText(l, m);
+
+        function hitungAngka(a = 0, b = 0, c = 0) {
+            var c = 0 //mendeklarisasi di dalam fn membuat var itu menjadi lokal var kalau tidak mendeklarasikan akan mengambil variabel global
+            return a + b + c;
+        }
+        l = 'l'
+        m = hitungAngka(13, 100);
+        printText(l, m);
+
+        //==============================================================================
+        // array
+        // aray boleh lebih dari 1 tipe data
+        // --------------- method array -------------------------
+        // * sort() => menyorting sesuai abjad
+        // * reverse() => kebalikan sort()
+        // * concat() => mengabungkan 2 aray atau lebih
+        // * length => berapa isi dari array
+        // * join() => menentukan pemisah
+        // * splice(mulai darimana, ada berapa elemen yg mau dihapus, yang mau ditambahkan, lainya) => menghapus dan menambahkan
+        // * pop() => mengambil atau menghapus nilai array terakhir
+        // * push() => menambahkan dari akhir
+        // * shift => kebalikan dari pop
+        // * unshift => menambahkan data diawal
+
+        //==============================================================================
+        // if | else if | else | switch |
+
+        //==============================================================================
+        //for(var i = 0; i < 10; i++) harus deklarasi supaya lokal variabel
+        //while loop
+        //do while loop
+
+        //==============================================================================
+        //==============================================================================
+        //==============================================================================
+        // debuging di js => inspect elemen
+
+    </script>
+</body>
+</html>
